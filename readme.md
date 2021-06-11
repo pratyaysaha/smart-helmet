@@ -1,5 +1,6 @@
 # Smart Helmet Website
-
+## Deployed
+https://smarthelmetiotlabs.herokuapp.com/
 ## How it was made?
 ### Frontend
 - HTML,CSS,JS with EJS templating
