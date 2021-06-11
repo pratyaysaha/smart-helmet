@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css"/>
+    <link rel="stylesheet" href="/alert.css"/>
+    <title>Alerts</title>
+</head>
+<body>
+    <%-include('../views/header-nt',{name: data.name})%>
+    <div class="container">
+        <div class="sidebar-container">
+            <%-include('../views/sidebar')%>
+        </div>
+        <div class="content-container">
+            <div class="alert-container">
+                <div class="title">
+                    Your alerts
+                </div>
+                <input class="input userid" type="text" value="<%=data._id%>" hidden  />
+                <div class="my-alerts">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    .alert{
+        color: #DEE51D;
+    }
+</style>
+<script src = "/socket.io/socket.io.js"></script>
+<script src="/index.js"></script>
+<script src="/alert.js"></script>
+</html>

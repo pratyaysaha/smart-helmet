@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='/overview.css'/>
+    <link rel="stylesheet" href='/index.css'/>
+    <title>Smart Helmet</title>
+</head>
+<body>
+    <%-include('../views/header-nt',{name: data.name})%>
+    <div class="container">
+        <div class="sidebar-container">
+            <%-include('../views/sidebar')%>
+        </div>
+        <div class="content-container">
+            <div class="overview-container">
+                <div class="personal-details">
+                    <div class="pd-title">
+                        Your personal details
+                    </div>
+                    <div class="pds">
+                        <div class="item name">
+                            <div class="item-label">Name</div>
+                            <div class="item-content"><%=data.name%></div>
+                        </div>
+                        <div class="item email">
+                            <div class="item-label">Email</div>
+                            <div class="item-content"><%=data.email%></div>
+                        </div>
+                        <div class="item phone">
+                            <div class="item-label">Phone</div>
+                            <div class="item-content"><%=data.contactNumber%></div>
+                        </div>
+                        <div class="item blood">
+                            <div class="item-label">Blood</div>
+                            <div class="item-content"><%=data.blood%></div>
+                        </div>
+                        <div class="item gender">
+                            <div class="item-label">Gender</div>
+                            <div class="item-content"><%=data.gender%></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="emergency-container">
+                    <div class="pd-title">
+                        Your emergency contacts
+                    </div>
+                    <div class="ecs">
+                        <%data.emergencyContacts.map((item, index)=>{%>
+                            <div class="card c<%=index%+1%>">
+                                <div class="card-wrapper">
+                                    <div class="card-label">
+                                        Emergency Contact <%=index+1%>
+                                    </div>
+                                    <div class="card-contents">
+                                        <div class="card-content">
+                                            <span><i class="fas fa-user-alt"></i></span>
+                                            <span><%=item.name%></span>
+                                        </div>
+                                        <div class="card-content">
+                                            <span><i class="fas fa-phone"></i></span>
+                                            <span><%=item.phone%></span>
+                                        </div>
+                                        <div class="card-content">
+                                            <span><i class="fas fa-at"></i></span>
+                                            <span><%=item.email%></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <%})%>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    .overview{
+        color: #DEE51D;;
+    }
+</style>
+<script src="/index.js"></script>
+</html>

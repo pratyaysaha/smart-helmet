@@ -1,0 +1,40 @@
+<script src="https://kit.fontawesome.com/11d589870a.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href='/header-nt.css'/>
+<div class="head-container">
+    <div class="left">
+        <div class="hamburger" onclick="displayMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="logo" onclick="location.assign(`${window.location.origin}`)">
+            <i class="fas fa-hard-hat"></i>
+        </div>        
+        <div class="app-name" onclick="location.assign(`${window.location.origin}`)">
+            Smart Helmet
+        </div>
+    </div>
+    <div class="right">
+        <div class="menu-item account" title="Account"  onclick="location.assign(`${window.location.origin}/account`)">
+            <i class="far fa-user-circle"></i>
+        </div>
+        <div class="menu-item account-big" title="Account" onclick="location.assign(`${window.location.origin}/account`)">
+            <%=name%>
+        </div>
+        <div class="menu-item logout" title="Logout" onclick="logout()">
+            <i class="fas fa-sign-out-alt"></i>
+        </div>
+    </div>
+</div>
+<script>
+    const logout=async()=>{
+        const url=`${window.location.origin}/api/user/logout`
+        await fetch(url)
+        .then((Response)=>Response.json())
+        .then((back)=>{
+            if(back.status)
+                location.assign(`${window.location.origin}/login`)
+            else
+                alert('Server Error!!! Try Again....');
+        })
+}
+</script>
+

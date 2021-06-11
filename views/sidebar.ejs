@@ -1,0 +1,29 @@
+<link rel="stylesheet" href='/sidebar.css'/>
+<div class="sidebar">
+    <div class="menu m1 overview" onclick="loadSection('overview')">
+        <div class="menu-content">
+            Overview
+        </div>
+    </div>
+    <div class="menu m2 device" onclick="loadSection('device')">
+        <div class="menu-content">
+            Add device
+        </div>
+    </div>
+    <div class="menu m3 alert" onclick="loadSection('alert')">
+        <div class="menu-content">
+            Alerts
+        </div>
+    </div> 
+</div>
+<script>
+    const loadSection=(section)=>{
+        if(section==='overview')
+            location.assign(`${window.location.origin}`)
+        else if(section==='device')
+            location.assign(`${window.location.origin}/device`) 
+        else if(section==='alert')
+            location.assign(`${window.location.origin}/alert`)
+        prev=curr;
+    }   
+</script>

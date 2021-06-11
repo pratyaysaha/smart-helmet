@@ -1,0 +1,117 @@
+
+.device-container
+{
+    margin: 40px 30px 20px 20px;
+    font-family: 'Nunito', sans-serif;
+}
+.add-device
+{
+    display: flex;
+    flex-direction: column;
+}
+.add-device-container
+{
+    margin-bottom: 20px;
+}
+.input-field
+{
+    width: fit-content;
+    border: 1px solid #444;
+    position: relative;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 47px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.input-field>i{
+    color: #444;
+    font-size: 20px;
+    padding-right: 5px;
+}
+.input
+{
+    min-width: 80%;
+    width: 84%;
+    height: 30px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding-right: 20px;
+    font-family: 'Nunito', sans-serif;
+    background: transparent;
+}
+.message{
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.title
+{
+    font-weight: bold;
+    font-size: 26px;
+}
+.button
+{
+    background-color: #4481eb;
+    width: fit-content;
+    padding: 10px 30px;
+    border-radius: 47px;
+    color: white;
+    user-select: none;
+    height: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+.button:hover
+{
+    cursor: pointer;
+    background-color: #184594;
+}
+.devices
+{
+    margin-top: 20px;
+}
+.each-device{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: #444 2px solid;
+    border-radius: 30px;
+    width: 40%;
+}
+.device-id{
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.device-id>div{
+    margin-right: 20px;
+}
+.deregister-button:hover{
+    cursor: pointer;
+}
+.no-device
+{
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    color: #444;
+    margin-left: 20px;
+}
+@media screen  and (max-width : 880px)
+{
+    .input-field
+    {
+        width: 90%;
+    }
+    .each-device{
+        width: 100%;
+    }
+}

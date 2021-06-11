@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/device.css"/>
+    <link rel="stylesheet" href="/index.css"/>
+    <title>Devices</title>
+</head>
+<body>
+    <%-include('../views/header-nt',{name: data.name})%>
+    <div class="container">
+        <div class="sidebar-container">
+            <%-include('../views/sidebar')%>
+        </div>
+        <div class="content-container">
+            <div class="device-container">
+                <div class="add-device-container">
+                    <div class="title">
+                        Add your device
+                    </div>
+                    <div class="add-device">
+                        <div class="input-field">
+                            <i class="fas fa-hard-hat"></i>
+                            <input type="text" class="input deviceid" placeholder="Device ID" oninput="deviceFormatCheck(this)"/>
+                            <input type="text" class="input userid" hidden value="<%=data._id%>"/>
+                        </div>
+                        <div class="message device">
+                        </div>
+                        <div class="button" onclick="addDevice()">
+                            Add
+                        </div>
+                    </div>
+                </div>
+                <div class="registered-devices">
+                    <div class="title">
+                        Your devices
+                    </div>
+                    <div class="devices">
+                        <div class="device-wrapper">
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/device.js"></script>
+<script src="/index.js"></script>
+<style>
+    .device{
+        color:#DEE51D;
+    }
+</style>
+</html>
+
