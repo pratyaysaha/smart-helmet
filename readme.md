@@ -23,7 +23,7 @@
         Schema
         ```javascript
             {
-                macId: 84:0D:8E:A5:82:97 
+                macId: "84:0D:8E:A5:82:97" 
             }
         ```
         ```Note : Use only and only colon format of MAC Address```<br>
